@@ -399,7 +399,7 @@ draw("cumple", "cumple", "radio", CUMPLE);
 draw("mejoras", "mejoras", "checkbox", MEJORAS);
 draw("comunicacion", "comunicacion", "checkbox", COMUNICACION);
 const STAR = '<svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.4 6.9.7-5.2 4.7 1.5 6.9L12 17.6 5.9 21.2l1.5-6.9L2.2 9.6l6.9-.7L12 2.5z"/></svg>';
-$("#calificacion").innerHTML = [1,2,3,4,5].map(n => `<input type="radio" id="star${n}" name="calificacion" value="${n}"><label for="star${n}" title="${n} de 5">${STAR}</label>`).join("");
+$("#calificacion").innerHTML = [5,4,3,2,1].map(n => `<input type="radio" id="star${n}" name="calificacion" value="${n}"><label for="star${n}" title="${n} de 5">${STAR}</label>`).join("");
 const RATE_TXT = {1:"1 — Deficiente",2:"2 — Regular",3:"3 — Bueno",4:"4 — Muy bueno",5:"5 — Excelente"};
 document.addEventListener("change", e => { if (e.target.name === "calificacion") $("#rateVal").textContent = RATE_TXT[e.target.value] || ""; });
 
